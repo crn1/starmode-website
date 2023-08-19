@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400&display=swap');
+
+body {
+  margin: 0;
+  background-color: #1C1C1C;
+  font-family: 'Roboto Mono', monospace;
+  color: #FAFAFF;
+  padding: 1rem;
+  max-width: 768px;
+  margin: auto;
+}
+
+@media screen and (max-width: 600px) {
+  body {
+    width: unset;
+  }
+}
+
+a {
+  text-decoration: none;
+  color: #2DABFF;
+  position: relative;
+}
+
+p, ul, li {
+  font-weight: 300;
+  padding-bottom: 1rem;
+}
+
+a:hover {
+  text-decoration: underline;
+  text-decoration-color: #2DABFF;
+}
+
+hr {
+  border-top: 3px dashed #FAFAFF;
+  border-bottom-width: 0px;
+}
+
+h1 {
+  padding: 3rem 0 2rem 0;
+}
+
+h2, h3, h4, h5, h6 {
+  padding: 2rem 0 0 0;
+}
+
+.previous-page {
+  padding: 2rem 0;
+}
+
+.topnav {
+  overflow: hidden;
+}
+
+.topnav .active {
+  text-decoration: underline;
+  text-decoration-color: #2DABFF;
+  color: #FAFAFF;
+}
+
+.topnav .icon {
+  display: none;
+}
+
+.topnav a {
+  float: right;
+  text-align: center;
+  padding: 1rem 1rem;
+}
+
+#topnav-logo-link {
+  float: left;
+  padding: 1rem 1rem 1rem 0;
+  color: #2DABFF;
+}
+
+#topnav-logo-link em {
+  color: #FAFAFF;
+  font-style: normal;
+}
+
+#topnav-first-link {
+  padding: 1rem 0 1rem 1rem;
+}
+
+@media screen and (max-width: 600px) {
+  .topnav a:not(:first-child) {display: none;}
+  .topnav a.icon {
+    float: right;
+    display: block;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .topnav.responsive { position: relative; }
+  .topnav.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+
+  .topnav.responsive a:not(:last-child) {
+    float: none !important;
+    display: block;
+    text-align: left;
+    padding: 1rem 1rem 1rem 0 !important;
+  }
+
+  .topnav.responsive {
+    background-color: #1C1C1C;
+    z-index: 99999;
+  }
+}
+
+#galaxy-background {
+  opacity: 0.5;
+  max-width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+}
+
+#hero-div {
+  max-width: 768px;
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+  padding: 0 1rem 0 0;
+}
+
+@media screen and (max-height: 480px) {
+  #hero-div {
+    max-width: unset;
+    position: unset;
+    top: unset;
+    transform: unset;
+  }
+}
+
