@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400&display=swap');
 
+/* GENERAL 
+=========================================================================
+=========================================================================
+*/
 body {
   margin: 0;
   background-color: #1C1C1C;
@@ -48,6 +52,11 @@ h2, h3, h4, h5, h6 {
 .previous-page {
   padding: 2rem 0;
 }
+
+/* NAVIGATION BAR 
+=========================================================================
+=========================================================================
+*/
 
 .topnav {
   overflow: hidden;
@@ -113,8 +122,46 @@ h2, h3, h4, h5, h6 {
   }
 }
 
+/* ANIMATIONS 
+=========================================================================
+=========================================================================
+*/
+
+#app-navbar, #hero-div {
+  opacity: 0;
+  animation-delay: 2.5s;
+  animation-name: FadeIn;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+
 #galaxy-background {
-  opacity: 0.5;
+  opacity: 0;
+  animation-name: FadeIn, GalaxyFadeOut;
+  animation-duration: 0.5s, 1s;
+  animation-delay: 0.5s, 2.5s;
+  animation-iteration-count: 1, 1;
+  animation-fill-mode: forwards;
+}
+
+@keyframes FadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+@keyframes GalaxyFadeOut {
+    0% { opacity: 1; }
+    100% { opacity: 0.5; }
+}
+
+
+
+/* GALAXY BACKGROUND 
+=========================================================================
+=========================================================================
+*/
+
+#galaxy-background {
   max-width: 100%;
   position: absolute;
   top: 50%;
@@ -122,6 +169,11 @@ h2, h3, h4, h5, h6 {
   transform: translate(-50%, -50%);
   z-index: -1;
 }
+
+/* MAIN HERO DIV 
+=========================================================================
+=========================================================================
+*/
 
 #hero-div {
   max-width: 768px;

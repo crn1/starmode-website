@@ -58,7 +58,7 @@ window.onload = () => {
 			const MAX_SIZE = 25;
 			const SIZE = (1 / PIXEL[2] * MAX_SIZE) | 0;
 			const BRIGHTNESS = SIZE / MAX_SIZE;
-			const COL = `rgba(255, 255, ${100 * BRIGHTNESS | 0 + 150}, ${BRIGHTNESS})`;
+			const COL = `rgba(45, 171, ${100 * BRIGHTNESS | 0 + 150}, ${BRIGHTNESS})`;
 			
 			CTX.beginPath();
 			CTX.fillStyle = COL;
@@ -107,7 +107,7 @@ window.onload = () => {
 
 	function createChars() {
 		for (let i = 0; i < MAX_CHARS; i++) {
-			const CHARACTER = "." //String.fromCharCode((Math.random() * 93 + 34) | 0);
+			const CHARACTER = "■" //String.fromCharCode((Math.random() * 93 + 34) | 0);
 			const X = signedRandom() * SEPARATION;
 			const Y = signedRandom() * SEPARATION;
 			const Z = signedRandom() * SEPARATION;
