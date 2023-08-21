@@ -1,14 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Geo&display=swap');
 
 /* GENERAL 
 =========================================================================
 =========================================================================
 */
+html {
+    color: #FAFAFF;
+}
+
 body {
   margin: 0;
   background-color: #1C1C1C;
-  font-family: 'Roboto Mono', monospace;
-  color: #FAFAFF;
+  font-family: 'Geo';
+  font-size: 24px;
   padding: 1rem;
   max-width: 768px;
   margin: auto;
@@ -127,7 +132,7 @@ h2, h3, h4, h5, h6 {
 =========================================================================
 */
 
-#app-navbar, #hero-div {
+#app-navbar.first-visit-animation, #hero-div.first-visit-animation {
   opacity: 0;
   animation-delay: 2.5s;
   animation-name: FadeIn;
@@ -135,13 +140,42 @@ h2, h3, h4, h5, h6 {
   animation-fill-mode: forwards;
 }
 
-#galaxy-background {
+#app-navbar.not-first-visit-animation, #hero-div.not-first-visit-animation {
+  opacity: 0;
+  animation-delay: 0s;
+  animation-name: FadeIn;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+
+#galaxy-background.first-visit-animation {
   opacity: 0;
   animation-name: FadeIn, GalaxyFadeOut;
   animation-duration: 0.5s, 1s;
   animation-delay: 0.5s, 2.5s;
   animation-iteration-count: 1, 1;
   animation-fill-mode: forwards;
+}
+
+#galaxy-background.not-first-visit-animation {
+  opacity: 0;
+  animation-name: FadeIn;
+  animation-duration: 1s;
+  animation-delay: 0s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+.global-fadeout {
+  animation-name: GlobalFadeOut;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+}
+
+.global-fadein {
+  animation-name: GlobalFadeIn;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards; 
 }
 
 @keyframes FadeIn {
@@ -154,7 +188,15 @@ h2, h3, h4, h5, h6 {
     100% { opacity: 0.5; }
 }
 
+@keyframes GlobalFadeOut {
+    0% { opacity: 1; }
+    100% { opacity: 0; }
+}
 
+@keyframes GlobalFadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
 
 /* GALAXY BACKGROUND 
 =========================================================================
@@ -167,7 +209,7 @@ h2, h3, h4, h5, h6 {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  z-index: -1;
+  z-index: -99999;
 }
 
 /* MAIN HERO DIV 
@@ -181,6 +223,7 @@ h2, h3, h4, h5, h6 {
   top: 50%;
   transform: translate(0, -50%);
   padding: 0 1rem 0 0;
+  z-index: -1;
 }
 
 @media screen and (max-height: 480px) {

@@ -1,12 +1,8 @@
-let appHeader = `
-    <script src="https://code.jquery.com/jquery-3.7.0.min.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="./main.css" rel="stylesheet">
-    <link rel="icon" type="image/x-icon" href="./favicon.ico">
-
-    <title>starmode recruitng</title>
-`;
-
-document.getElementById("app-header").innerHTML = appHeader;
+// href delay function. This allows fade-in/fade-out effects while clicking on links.
+function delay(URL)
+{
+    const body = document.getElementsByTagName("body")[0];
+    body.classList.remove('global-fadein');
+    body.classList.add('global-fadeout');
+    setTimeout( function() { window.location = URL }, 500);
+}
