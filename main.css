@@ -150,7 +150,7 @@ h2, h3, h4, h5, h6 {
 #app-navbar.first-visit-animation, #hero-div.first-visit-animation {
   opacity: 0;
   animation-delay: 2.5s;
-  animation-name: FadeIn;
+  animation-name: GlobalFadeIn;
   animation-duration: 1s;
   animation-fill-mode: forwards;
 }
@@ -158,14 +158,14 @@ h2, h3, h4, h5, h6 {
 #app-navbar.not-first-visit-animation, #hero-div.not-first-visit-animation {
   opacity: 0;
   animation-delay: 0s;
-  animation-name: FadeIn;
+  animation-name: GlobalFadeIn;
   animation-duration: 1s;
   animation-fill-mode: forwards;
 }
 
 #galaxy-background.first-visit-animation {
   opacity: 0;
-  animation-name: FadeIn, GalaxyFadeOut;
+  animation-name: GlobalFadeIn, GalaxyFadeOut;
   animation-duration: 0.5s, 1s;
   animation-delay: 0.5s, 2.5s;
   animation-iteration-count: 1, 1;
@@ -174,7 +174,7 @@ h2, h3, h4, h5, h6 {
 
 #galaxy-background.not-first-visit-animation {
   opacity: 0;
-  animation-name: FadeIn;
+  animation-name: GalaxyFadeIn;
   animation-duration: 1s;
   animation-delay: 0s;
   animation-iteration-count: 1;
@@ -193,9 +193,9 @@ h2, h3, h4, h5, h6 {
   animation-fill-mode: forwards; 
 }
 
-@keyframes FadeIn {
+@keyframes GalaxyFadeIn {
     0% { opacity: 0; }
-    100% { opacity: 1; }
+    100% { opacity: 0.5; }
 }
 
 @keyframes GalaxyFadeOut {
