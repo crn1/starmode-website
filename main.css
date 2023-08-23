@@ -31,7 +31,7 @@ a {
 
 p, ul, li {
   font-weight: 300;
-  padding-bottom: 1rem;
+  padding-bottom: 0.5rem;
 }
 
 a:hover {
@@ -61,6 +61,17 @@ h2, h3, h4, h5, h6 {
 .previous-page {
   padding: 2rem 0;
 }
+
+.blog-date {
+  margin-top: 0;
+  padding-bottom: 3rem;
+}
+
+.blog-title {
+  padding-bottom: 0;
+}
+
+
 
 /* NAVIGATION BAR 
 =========================================================================
