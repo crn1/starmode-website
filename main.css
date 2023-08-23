@@ -195,12 +195,12 @@ h2, h3, h4, h5, h6 {
 
 @keyframes GalaxyFadeIn {
     0% { opacity: 0; }
-    100% { opacity: 0.5; }
+    100% { opacity: 0.4; }
 }
 
 @keyframes GalaxyFadeOut {
     0% { opacity: 1; }
-    100% { opacity: 0.5; }
+    100% { opacity: 0.4; }
 }
 
 @keyframes GlobalFadeOut {
