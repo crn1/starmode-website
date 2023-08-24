@@ -36,7 +36,7 @@
 	    <br />
 			<p>If you're a company looking for a very tough role to fill or if you're a candidate with a very rare skillset, you came to the right place.</p>
 			<br />
-			<p>Connect with me on <a href="https://www.linkedin.com/in/george-gluvajic/">LinkedIn</a> or drop me a message on <a href="mailto:george@starmode.io">george@starmode.io</a>
+			<p>Connect with me on <a href="https://www.linkedin.com/in/george-gluvajic/">LinkedIn</a> or drop me an <a id="email" href="#">email</a>.
 	</div>
 
 	<script>
@@ -58,6 +58,12 @@
       heroDiv.classList.add("not-first-visit-animation");
       galaxyBackground.classList.add("not-first-visit-animation");
     }
+
+    //Obfucate email address
+    var me = "george";
+    var place = "starmode.io";
+    var elink = document.getElementById("email");
+    elink.href = `mailto:${me}@${place}`;
 
 	</script>
   </body>

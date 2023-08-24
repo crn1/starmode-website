@@ -3,3 +3,9 @@ let appFooter = `
 `;
 
 document.getElementById("app-footer").innerHTML = appFooter;
+
+//obfucate email address
+var me = "george";
+var place = "starmode.io";
+var elink = document.getElementById("email");
+elink.href = `mailto:${me}@${place}`;
